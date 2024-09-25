@@ -21,12 +21,6 @@
 
     </head>
     <body>
-
-        <style>
-            .main-bg {
-                background-image: url('{{ asset('/images/main-bg.png') }}');
-            }
-        </style>
         <div class="login main-bg {{ Route::currentRouteName() == 'register' ? 'register-page' : '' }}">
             <div class="branding-container">
                 @include('components.branding')

@@ -20,9 +20,6 @@
 
 <body class="welcome main main-bg">
     <style>
-         .main-bg {
-                background-image: url('{{ asset('/images/main-bg.png') }}');
-            }
         .main-logo {
             width: 34%;
             height: auto;

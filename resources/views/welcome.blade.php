@@ -17,11 +17,6 @@
 </head>
 
 <body class="welcome main main-bg">
-<style>
-            .main-bg {
-                background-image: url('{{ asset('/images/main-bg.png') }}');
-            }
-        </style>
     <div class="branding-container">
         @include('components.branding')
     </div>

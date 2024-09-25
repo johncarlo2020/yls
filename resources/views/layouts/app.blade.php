@@ -24,12 +24,6 @@
 </head>
 
 <body>
-
-    <style>
-         .main-bg {
-                background-image: url('{{ asset('/images/main-bg.png') }}');
-            }
-    </style>
     <main>
         {{ $slot }}
     </main>

@@ -1,6 +1,7 @@
 <x-guest-layout>
     <div class="register">
-        <h1>Register</h1>
+        <h1>YOU ARE ONE STEP AWAY</h1>
+        <p>Please fill in the information below to complete the registration process and unlock exclusive benefits from YSL Malaysia.</p>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -79,14 +80,14 @@
                 <input type="checkbox" id="consent2" name="consent" value="1" required>
                 <label for="consent2">
                 </label>
-                <p>I have read and agree to the Terms and Conditions and <a href="https://wardahbeauty.com/privacy-policy">privacy policy.</a></p>
+                <p>I hereby confirm that I am at least 18 years of age and I further consent to YSL Malaysia Sdn. Bhd. ("YSL") processing my personal data which I have provided in this registration form, in accordance with the Privacy Policy and Terms & Conditions</p>
             </div>
 
             <div class="checkbox-container concent-container">
                 <input type="checkbox" id="marketing" name="marketing" value="0"  >
                 <label for="marketing">
                 </label>
-                <p>I agree to receive marketing and promotional communications from Wardah via e-mail and text messages (including SMS/WhatsApp).</p>
+                <p>I agree to receive marketing information, latest promotions, products and services from "YSLl" via the following channels:</p>
             </div>
 
 
