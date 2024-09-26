@@ -10,7 +10,9 @@
             >
                 <div class="tile {{ $station->id %2 == 0? '':'reverse' }}">
                     <p class="station-number">{{$station->id}}</p>
-                    <div class="img-container">
+                    <div
+                        class="img-container {{$station->status == true ? 'active':''}}"
+                    >
                         <img
                             src="{{ asset('images/S' . $station->id . '.jpg') }}"
                             alt=""

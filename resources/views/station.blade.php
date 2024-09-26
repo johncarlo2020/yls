@@ -32,12 +32,6 @@
                 <h1 class="station-number">0{{ $station->id }}</h1>
                 <h2 class="station-name">{{ $station->name }}</h2>
                 <p class="tag-line">{{ $station->description }}</p>
-                @if ($station->id == 5)
-                    <p class="tag-line">
-                        And experience revolutionary Personalised RoboSkin to get
-                        tailor-made skin solutions for your specific skin needs.
-                    </p>
-                @endif
             </div>
             <div class="station-img">
                 <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
@@ -48,6 +42,13 @@
                         <img src="{{ asset('images/camera.png') }}" />
                     </button>
                     <p>Scan the QR Code at the station to proceed</p>
+                </div>
+            @else
+                <div class="scanner-button">
+                    <p class="mb-2">Checked In</p>
+                    <a class="button" href="{{ route('dashboard') }}"> Back</a>
+
+
                 </div>
             @endif
         </div>

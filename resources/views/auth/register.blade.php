@@ -4,10 +4,15 @@
             @csrf
 
             <h1>BORN TO BE ICONIC</h1>
-
             <div id="scannerContainer" class="scanner-container">
                 <!-- <button id="close" class="mx-auto mt-4 camera-btn">x</button> -->
                 <div id="reader"></div>
+                <x-input-error
+                    class="text-danger"
+                    :messages="$errors->get('code')"
+                    class="mt-2"
+                />
+
                 <div class="p-3 mt-3">
                     <p class="px-4 text-center bottom-text">
                         Scan the QR code from crew to Start your Journey
