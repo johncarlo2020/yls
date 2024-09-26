@@ -38,56 +38,16 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'fname' => ['required', 'string', 'max:255'],
-            'lname' => ['required', 'string', 'max:255'],
-            'age' => ['required'],
-            // 'number' => ['required', 'string', new InternationalPhoneNumber],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+            'code' => ['required', 'string', 'max:255'],
         ]);
-        $marketing = false;
-
-        if ($request->has('marketing')) {
-            $marketing = true;
-        }
-
-        // After validation, fetch country by phone number
-        $phoneNumber = $request->input('country');
-
-        // Extract the phone prefix
-        $phonePrefix = '+' . substr($phoneNumber, 1, 2); // This assumes the prefix is always 2 characters after the '+'
-
-        // Query the country based on the phone prefix
-        $country = Countries::where('phone_code', $phonePrefix)->first();
-
-        // dd($request);
 
         $user = User::create([
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-            'age_group' => $request->age,
-            'number' => $phoneNumber,
-            'email' => $request->email,
-            'country' => $country->name,
-            'marketing' => $marketing,
+            'code' => $request->code,
             'last_login_at' => Carbon::now(),
             'password' => Hash::make('password'),
         ]);
 
         $user->assignRole('client');
-
-        if ($request->has('regimes')) {
-            $regimes = $request->regimes; // Assuming $request->regimes is an array of regime IDs
-
-            $regimeUsers = [];
-
-            foreach ($regimes as $regimeId) {
-                $regimeUsers[] = [
-                    'user_id' => $user->id,
-                    'regime_id' => $regimeId,
-                ];
-            }
-            RegimeUser::insert($regimeUsers);
-        }
 
         // Use the insert method to insert multiple records in one query
         event(new Registered($user));

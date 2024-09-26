@@ -138,8 +138,7 @@
 
             console.log("Scanned code: " + code);
             // Generate QR code for the dashboard link
-            var dashboardUrl = "{{ url('/dashboard') }}/" + code;
-            generateQRCode(dashboardUrl);
+            generateQRCode(code);
 
             // Show the modal
             $("#qrModal").modal("show");

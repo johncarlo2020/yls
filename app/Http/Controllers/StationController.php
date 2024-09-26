@@ -14,9 +14,7 @@ class StationController extends Controller
 {
     public function index(Station $station)
     {
-        $id = 1;
-
-        $user = StationUser::where('user_id', $id)
+        $user = StationUser::where('user_id', auth()->id())
             ->where('station_id', $station->id)
             ->exists();
 
@@ -25,8 +23,7 @@ class StationController extends Controller
 
     public function welcome()
     {
-        $id = 1;
-        $user = User::with('stationUser')->where('id', $id)->first();
+        $user = User::with('stationUser')->where('id', auth()->id())->first();
         // dd($user->stationUser->count());
 
         $stationDone = $user->stationUser->count();
