@@ -34,7 +34,11 @@
                 <p class="tag-line">{{ $station->description }}</p>
             </div>
             <div class="station-img">
-                <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
+                @if ($station->id == 1)
+                    <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop alt="" />
+                @else
+                    <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
+                @endif
             </div>
             @if ($user == false)
                 <div class="scanner-button">

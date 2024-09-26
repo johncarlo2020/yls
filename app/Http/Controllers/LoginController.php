@@ -14,7 +14,7 @@ class LoginController extends Controller
     public function authenticate(Request $request): RedirectResponse
     {
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'code' => ['required', 'string'],
             'password' => ['required'],
         ]);
 
@@ -24,9 +24,11 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+        return back()
+            ->withErrors([
+                'code' => 'The provided credentials do not match our records.',
+            ])
+            ->onlyInput('code');
     }
 
     public function authenticateAdmin(Request $request): RedirectResponse
@@ -42,8 +44,10 @@ class LoginController extends Controller
             return redirect()->intended('admin');
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+        return back()
+            ->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ])
+            ->onlyInput('email');
     }
 }
