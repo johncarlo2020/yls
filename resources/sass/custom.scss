@@ -198,18 +198,28 @@ a:active {
 }
 
 .welcome {
+    position: relative;
     .branding-container {
         margin-top: 10%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 50%;
+            height: 10vh;
+            object-fit: contain;
+        }
     }
 
     .container {
+        position: absolute;
+        bottom: 55px;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
-        width: 70%;
-        margin: 53% auto 0 auto;
-
-        @media (max-width: 375px) {
-            margin: 35% auto 0 auto;
-        }
+        width: 90%;
 
         h1 {
             font-size: 20px;
