@@ -24,6 +24,38 @@
 </head>
 
 <body>
+    <style>
+        // add custom font from files Singulier-Regular.otf and Singulier-Bold.otf in the fonts folder
+        @font-face {
+            font-family: "Singulier";
+            src: url("../fonts/Singulier-Regular.otf") format("opentype");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "Singulier-bold";
+            src: url("../fonts/Singulier-Bold.otf") format("opentype");
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: "Singulier-light";
+            src: url("../fonts/Singulier-Light.otf") format("opentype");
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: "Singulier-heavy";
+            src: url("../fonts/Singulier-Heavy.otf") format("opentype");
+            font-weight: 800;
+        }
+
+        @font-face {
+            font-family: "Singulier-demi";
+            src: url("../fonts/Singulier-Demi.otf") format("opentype");
+            font-weight: 500;
+        }
+    </style>
     <main>
         {{ $slot }}
     </main>
