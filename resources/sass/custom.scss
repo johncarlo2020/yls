@@ -528,7 +528,7 @@ a:active {
 }
 
 .admin-login {
-    background: linear-gradient(to bottom, #FFFFFF 0%, #D3EEFD 100%);
+    background: #000;
     .wrapper {
         margin-top: 10%;
         flex-direction: column;
@@ -540,37 +540,48 @@ a:active {
         width: 248px
     }
     .form-container {
-        width: 505px;
+        width: 355px;
+        background-color: #C1C1C166;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
 
         @media (max-width: 768px) {
             width: 100%;
         }
         label {
             letter-spacing: 0;
-            font-size: 16px;
-            color: #3C727A;
+            font-size: 14px;
+            font-weight: 300;
         }
 
         h1 {
             font-size:25px;
-            color:#3C727A;
             font-weight: 300;
         }
         h2 {
-            font-size:31px;
-            color:#3C727A;
-            font-weight: 500;
+            font-size:20px;
+            font-weight: 300;
+            margin-bottom: 30px;
+
         }
 
         p {
-            font-size:16px;
-            color:#3C727A;
+            font-size:12px;
             font-weight: 400;
+            text-align: center;
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
         }
 
+
         .form-control {
-            border-radius: 6px !important;
-            min-height: 60px;
+            border-radius: 0px !important;
+            min-height: 48px;
+            border: 2px solid #9E9E9E
         }
         .remember {
             label {
@@ -586,26 +597,35 @@ a:active {
         }
 
         input {
-            padding:10px 20px;
+            padding:10px;
             font-size: 14px;
             &::placeholder {
                 color: #ABABAB;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
         .button {
             width: 100%;
-            padding: 15px 40px;
-            font-size: 16px;
+            padding: 10px 40px;
+            font-size: 14px;
             font-weight: 400;
             margin-top: 30px;
+            background-color: #9E9E9E !important;
+            border-radius: 4px;
         }
     }
     .copy-text {
-        font-size: 14px;
-        color: #7D7D7D;
-        font-weight: 400;
+        font-size: 8px;
+        font-weight: 300;
         margin-top: 20px;
+        text-align: center;
+
+        span {
+            font-size: 6px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
     }
 
 }

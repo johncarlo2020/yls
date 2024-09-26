@@ -22,16 +22,14 @@
     </head>
 
     <body class="main admin-login">
-        <div class="contaniner wrapper d-flex justify-container-center">
+        <div class="contaniner wrapper d-flex justify-container-center p-2">
             <div class="branding-container">
                 @include('components.branding')
             </div>
             <div
-                class="p-4 mx-auto bg-white border rounded shadow-sm form-container"
+                class="p-4 mx-auto shadow-sm form-container"
             >
-                <h1 class="mb-4">Welcome!</h1>
-                <h2>Sign in to</h2>
-                <p class="mb-4">{{ env("APP_NAME") }} Admin Panel</p>
+                <h2>Sign in to Admin</h2>
                 <form
                     method="POST"
                     id="loginForm"
@@ -63,16 +61,18 @@
                             id="exampleInputPassword1"
                         />
                     </div>
-
+{{--
                     <div class="checkbox-container">
                         <input type="checkbox" id="remember" name="remember" />
                         <label for="remember"> </label>
                         <p>Remember me</p>
-                    </div>
+                    </div> --}}
                     <button type="submit" class="btn button">Login</button>
+                    <p class="mt-3">Dont have an account? <a href="">Create One</a></p>
                 </form>
             </div>
-            <p class="copy-text">Wowsome © Copyright 2024</p>
+            <p class="copy-text">YSL.com <br> <span>®️ ALL RIGHTS RESERVED BY YSL.
+                POWERED BY WOWSOME 2024</span></p>
         </div>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
