@@ -17,12 +17,13 @@
     </head>
 
     <body class="welcome main main-bg">
-        <div class="branding-container">@include('components.branding')
+        <div class="branding-container">
+            @include('components.branding')
             <p class="mt-4">Welcome</p>
         </div>
 
         <div class="container">
-            <a class="button" href=""> SIGN In </a>
+            <a class="button" href=""> Sign In </a>
             <br />
             <a class="button" href=""> Sign Up </a>
         </div>
