@@ -43,6 +43,7 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 
 </head>
 
@@ -78,6 +79,15 @@
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Users</span>
+                    </a>
+                </li>
+                <li class="nav-item "></li>
+                    <a class="nav-link {{ request()->routeIs('scanner') ? 'active' : '' }}" href="{{ route('scanner') }}">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-mobile-button text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Scanner</span>
                     </a>
                 </li>
 
@@ -136,6 +146,7 @@
     <script src="./assets/js/argon-dashboard.min.js?v=2.0.4"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

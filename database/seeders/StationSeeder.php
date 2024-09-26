@@ -18,66 +18,24 @@ class StationSeeder extends Seeder
      */
     public function run()
     {
-        Regime::create([
-            'name' => 'MICELLAR WATER/CLEANSUNG BALM',
-        ]);
-
-        Regime::create([
-            'name' => 'FACE WASH',
-        ]);
-
-        Regime::create([
-            'name' => 'TONER',
-        ]);
-
-        Regime::create([
-            'name' => 'SERUM',
-        ]);
-
-        Regime::create([
-            'name' => 'MOISTURIZER',
-        ]);
-
-        Regime::create([
-            'name' => 'SUNSCREEN',
-        ]);
-
-        Regime::create([
-            'name' => 'NONE',
+        Station::create([
+            'name' => 'LIBRE FRAGRANCE & MAKE-UP DISCOVERY',
+            'description' => 'Experience the heat of a flower and the sensuality of a flame in the new Libre Flowers & Flames and discover the world of YSL beauty makeup.',
         ]);
 
         Station::create([
-            'name' => 'SKINVENTURE',
-            'description'=> 'Discover the underlying factors contributing to your skin concerns through interactive skin journey.'
+            'name' => 'BORN TO BE ICONIC',
+            'description' => 'Explore the iconic scents of LIBRE & MYSLF in refill form and indulge in a sensorial journey made to last a lifetime.',
         ]);
 
         Station::create([
-            'name' => 'SUN PROTECT ZONE',
-            'description'=> 'Understand your SPF coverage and explore various sunscreen formulations to discover the ideal sunscreen for your specific skin requirements.'
-
+            'name' => 'MYSLF FRAGRANCE DISCOVERY',
+            'description' => 'Encounter MYSLF Le Parfum, a woody floral statement enhanced by velvety vanilla, for a new sensual ambery trail.',
         ]);
 
         Station::create([
-            'name' => 'SKIN BARRIER REBORN',
-            'description' => 'Explore more about skin layers anatomy and hidden truth about skin barrier with
-interactive creative visual.'
-        ]);
-
-        Station::create([
-            'name' => 'BRIGHTENING SKIN SCIENCE',
-            'description' => 'Gain a profound understanding of highly curated brightening ingredients, through an interactive display and scientific game.'
-
-        ]);
-
-        Station::create([
-            'name' => 'SKIN SCIENCE CLINIC & PERSONALIZED ROBOSKIN',
-            'description' => 'Get a personal skin consultation from dermatologists and skin experts, with the latest skin analyzer technology.'
-
-        ]);
-
-        Station::create([
-            'name' => 'SKINVERSE LOUNGE',
-            'description' => 'Claim your privilege refreshment after completing the journey at each station. Visit our Skinverse Lounge to redeem.'
+            'name' => 'MYSELFIE MANIFESTO',
+            'description' => 'Strike a pose and be unapologetically yourself.',
         ]);
 
         $role = Role::create(['name' => 'client']);
@@ -85,18 +43,11 @@ interactive creative visual.'
         $role = Role::create(['name' => 'admin']);
 
         $user = User::create([
-            'fname' => 'admin',
-            'lname' => 'admin',
-            'age_group' => 'admin',
-            'number' => '0123456789',
+            'code' => '0000000000000',
             'email' => 'admin@gmail.com',
-            'country'=> 'Malaysia',
-            'password' => Hash::make('WowsomeWardah'),
+            'password' => Hash::make('WowsomeYsl'),
         ]);
 
         $user->assignRole('admin');
-
-
-
     }
 }

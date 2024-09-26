@@ -35,19 +35,17 @@ Route::get('/congrats', function () {
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin', 'App\Http\Controllers\StationController@admin')->name('admin');
     Route::get('/admin/users', 'App\Http\Controllers\StationController@users')->name('users');
+    Route::get('/admin/scanner', 'App\Http\Controllers\StationController@scanner')->name('scanner');
+
     Route::get('/admin/{user}', 'App\Http\Controllers\StationController@userData')->name('userData');
     Route::post('/admin/check', 'App\Http\Controllers\StationController@check')->name('check');
 });
 
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/station/{station}', 'App\Http\Controllers\StationController@index')->name('station.show');
+Route::get('/dashboard', 'App\Http\Controllers\StationController@welcome')->name('dashboard');
+Route::post('/process_qr_code', 'App\Http\Controllers\StationController@scan')->name('process_qr_code');
 
-
-Route::group(['middleware' => ['client']], function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/station/{station}', 'App\Http\Controllers\StationController@index')->name('station.show');
-    Route::get('/dashboard', 'App\Http\Controllers\StationController@welcome')->name('dashboard');
-    Route::post('/process_qr_code', 'App\Http\Controllers\StationController@scan')->name('process_qr_code');
-});
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
