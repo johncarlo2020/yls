@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Wardah</title>
+        <title>{{ config("APP_NAME", "Wardah") }}}}</title>
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -31,7 +31,9 @@
             >
                 <h1 class="mb-4">Welcome!</h1>
                 <h2>Sign in to</h2>
-                <p class="mb-4">{{ env("app_name") }} Admin Panel</p>
+                <p class="mb-4">
+                    {{ config("APP_NAME", "Wardah") }} Admin Panel
+                </p>
                 <form
                     method="POST"
                     id="loginForm"
