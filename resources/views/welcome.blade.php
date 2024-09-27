@@ -23,9 +23,7 @@
         </div>
 
         <div class="container">
-            <a class="button" href=""> Sign In </a>
-            <br />
-            <a class="button" href=""> Sign Up </a>
+            <a class="button" href=""> Start</a>
         </div>
     </body>
 </html>
