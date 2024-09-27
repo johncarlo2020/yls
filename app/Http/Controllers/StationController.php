@@ -21,6 +21,15 @@ class StationController extends Controller
         return view('station', compact('station', 'user'));
     }
 
+    public function checkExisting(Request $request)
+    {
+        $code = $request->code;
+
+        $check = User::where('code', $code)->exists();
+
+        return $check;
+    }
+
     public function welcome()
     {
         $user = User::with('stationUser')->where('id', auth()->id())->first();

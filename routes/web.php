@@ -32,6 +32,8 @@ Route::get('/congrats', function () {
     return view('congrats');
 });
 
+Route::post('/checkExisting', 'App\Http\Controllers\StationController@checkExisting')->name('checkExisting');
+
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/admin', 'App\Http\Controllers\StationController@admin')->name('admin');
     Route::get('/admin/users', 'App\Http\Controllers\StationController@users')->name('users');
