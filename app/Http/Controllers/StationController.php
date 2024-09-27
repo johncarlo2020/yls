@@ -30,6 +30,11 @@ class StationController extends Controller
         return $check;
     }
 
+    public function landing()
+    {
+        return view('landing');
+    }
+
     public function welcome()
     {
         $user = User::with('stationUser')->where('id', auth()->id())->first();

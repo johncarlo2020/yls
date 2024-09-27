@@ -48,6 +48,7 @@ Route::group(['middleware' => ['client']], function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/station/{station}', 'App\Http\Controllers\StationController@index')->name('station.show');
     Route::get('/dashboard', 'App\Http\Controllers\StationController@welcome')->name('dashboard');
+    Route::get('/landing', 'App\Http\Controllers\StationController@landing')->name('landing');
     Route::post('/process_qr_code', 'App\Http\Controllers\StationController@scan')->name('process_qr_code');
 });
 
