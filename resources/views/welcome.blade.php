@@ -17,13 +17,12 @@
     </head>
 
     <body class="welcome main main-bg">
-        <div class="branding-container">
-            @include('components.branding')
-            <p class="mt-4">Welcome</p>
-        </div>
-
+        <div class="branding-container">@include('components.branding')</div>
         <div class="container">
-            <a class="button" href=""> Start</a>
+            <p class="mt-4">
+                Please head to the registration counter to scan the QR code to
+                start your journey. Thank You.
+            </p>
         </div>
     </body>
 </html>
