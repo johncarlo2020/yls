@@ -2,36 +2,31 @@
 @import "variables";
 
         @font-face {
-    font-family: 'Singulier';
-    src: url('/assets/fonts/Singulier-Regular.woff2') format('woff2'),
-         url('/assets/fonts/Singulier-Regular.woff') format('woff'),
-         url('/assets/fonts/Singulier-Regular.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
+            font-family: 'Singulier';
+            src: url('../fonts/Singulier-Regular.woff2') format('woff2'),
+                url('../fonts/Singulier-Regular.woff') format('woff'),
+                url('../fonts/Singulier-Regular.otf') format('opentype');
+            font-style: normal;
+        }
 
         @font-face {
-            font-family: "Singulier-bold";
+            font-family: "Singulier-Bold";
             src: url("../fonts/Singulier-Bold.otf") format("opentype");
-            font-weight: 600;
         }
 
         @font-face {
             font-family: "Singulier-light";
             src: url("../fonts/Singulier-Light.otf") format("opentype");
-            font-weight: 300;
         }
 
         @font-face {
             font-family: "Singulier-heavy";
             src: url("../fonts/Singulier-Heavy.otf") format("opentype");
-            font-weight: 800;
         }
 
         @font-face {
             font-family: "Singulier-demi";
             src: url("../fonts/Singulier-Demi.otf") format("opentype");
-            font-weight: 500;
         }
 
 
@@ -381,8 +376,8 @@ a:active {
     }
 
     h1 {
-        font-size: 24px;
-        font-weight: 600;
+        font-family: "Singulier-Bold";
+        font-size: 32px;
         color: #ffffff;
         letter-spacing: 1px;
         text-align: center;
@@ -437,9 +432,9 @@ a:active {
         padding: 10px;
         text-align: center;
         .station-born {
+            font-family: "Singulier-Bold";
             font-size: 32px;
             letter-spacing: 1px;
-            font-weight: 600;
             padding: 0;
             margin: 0;
             margin-bottom: 18px;
@@ -454,7 +449,8 @@ a:active {
         }
 
         .station-name {
-            font-size: 18px;
+             font-family: "Singulier-demi";
+            font-size: 24px;
             letter-spacing: 1px;
             padding: 0;
             margin: 0;
@@ -463,6 +459,7 @@ a:active {
         }
 
         .tag-line {
+            font-family: 'Singulier-light';
             font-size: 14px;
         }
     }
@@ -566,9 +563,16 @@ a:active {
     }
 }
 .station-name-dashboard{
-    font-size: 12px;
+    font-family: 'Singulier';
+    font-size: 13px;
     align-items: center;
     text-align: center;
+}
+.landing-tagline{
+        font-family: "Singulier-light";
+    font-size: 14px;
+    letter-spacing: 1px;
+
 }
 
 .check-mark {
