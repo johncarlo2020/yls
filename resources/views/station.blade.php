@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="modal fade" id="scanCompleteModal" tabindex="-1">
+    <div class="modal fade safari-padding" id="scanCompleteModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -36,25 +36,25 @@
             </div>
             <div class="station-img">
                 @if ($station->id == 2)
-                    <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop alt="" />
+                <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop alt="" />
                 @else
-                    <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
+                <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
                 @endif
             </div>
             @if ($user == false)
-                <div class="scanner-button">
-                    <button id="scan-btn" class="scan-btn">
-                        <img src="{{ asset('images/camera.png') }}" />
-                    </button>
-                    <p>Scan the QR Code at the station to proceed</p>
-                </div>
+            <div class="scanner-button">
+                <button id="scan-btn" class="scan-btn">
+                    <img src="{{ asset('images/camera.png') }}" />
+                </button>
+                <p>Scan the QR Code at the station to proceed</p>
+            </div>
             @else
-                <div class="scanner-button">
-                    <p class="mb-2">Checked In</p>
-                    <a class="button" href="{{ route('dashboard') }}"> Back</a>
+            <div class="scanner-button">
+                <p class="mb-2">Checked In</p>
+                <a class="button" href="{{ route('dashboard') }}"> Back</a>
 
 
-                </div>
+            </div>
             @endif
         </div>
         <div id="scannerContainer" class="scanner-container d-none">
@@ -74,13 +74,13 @@
     <script>
         const mainContent = document.getElementById('mainContent');
         const scannerContainer = document.getElementById('scannerContainer');
-        document.getElementById('btn-back').addEventListener('click', function(event) {
+        document.getElementById('btn-back').addEventListener('click', function (event) {
             event.preventDefault();
             mainContent.classList.remove('d-none');
             scannerContainer.classList.add('d-none');
         });
 
-        document.getElementById('scan-btn').addEventListener('click', function(event) {
+        document.getElementById('scan-btn').addEventListener('click', function (event) {
             event.preventDefault();
 
             mainContent.classList.add('d-none');
@@ -91,25 +91,25 @@
             const html5QrCode = new Html5Qrcode("reader");
 
             html5QrCode.start({
-                        facingMode: "environment",
-                    }, {
-                        fps: 10,
-                        qrbox: {
-                            width: 200,
-                            height: 250
-                        },
-                        aspectRatio: isLandscape ? 3 / 4 : 4 / 3
+                facingMode: "environment",
+            }, {
+                fps: 10,
+                qrbox: {
+                    width: 200,
+                    height: 250
+                },
+                aspectRatio: isLandscape ? 3 / 4 : 4 / 3
 
-                    },
-                    qrCodeMessage => {
-                        console.log(`${qrCodeMessage}`);
-                        sendMessage(`${qrCodeMessage}`);
-                        html5QrCode.stop();
+            },
+                qrCodeMessage => {
+                    console.log(`${qrCodeMessage}`);
+                    sendMessage(`${qrCodeMessage}`);
+                    html5QrCode.stop();
 
-                    },
-                    errorMessage => {
-                        console.log(`QR Code no longer in front of camera.`);
-                    })
+                },
+                errorMessage => {
+                    console.log(`QR Code no longer in front of camera.`);
+                })
                 .catch(err => {
                     console.log(`Unable to start scanning, error: ${err}`);
                 });
@@ -129,32 +129,32 @@
                 },
                 data: {
                     qrCodeMessage: message,
-                    station: {{ $station->id }}
+                    station: {{ $station-> id }}
                 },
-                success: function(response) {
-                    console.log('QR Code message sent successfully:', response);
-                    // Handle success response if needed
+        success: function(response) {
+            console.log('QR Code message sent successfully:', response);
+            // Handle success response if needed
 
-                    const trimmedMessage = message.trim();
-                    // Get the last character of the QR code message
-                    const lastCharacter = trimmedMessage.charAt(trimmedMessage.length - 1);
-                    $('.station_id').html(lastCharacter);
-
-
-                    $('.check').addClass('fa-circle-check text-success');
-
-                    $('#scanCompleteModal').modal('show');
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error sending QR Code message:', error);
-                    $('.station-text').html('Failed');
-                    $('.message').html('Invalid QR code. Please try again.');
-                    $('.check').addClass('fa-circle-xmark text-danger');
-
-                    $('#scanCompleteModal').modal('show');
+            const trimmedMessage = message.trim();
+            // Get the last character of the QR code message
+            const lastCharacter = trimmedMessage.charAt(trimmedMessage.length - 1);
+            $('.station_id').html(lastCharacter);
 
 
-                }
+            $('.check').addClass('fa-circle-check text-success');
+
+            $('#scanCompleteModal').modal('show');
+        },
+        error: function(xhr, status, error) {
+            console.error('Error sending QR Code message:', error);
+            $('.station-text').html('Failed');
+            $('.message').html('Invalid QR code. Please try again.');
+            $('.check').addClass('fa-circle-xmark text-danger');
+
+            $('#scanCompleteModal').modal('show');
+
+
+        }
             });
         }
 
