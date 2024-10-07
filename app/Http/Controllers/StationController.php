@@ -51,11 +51,15 @@ class StationController extends Controller
                 ->exists();
             $station->status = $userHasStation;
         }
+        // dd($stationDone);
 
-        if ($stationDone < 6) {
+        if ($stationDone < 4) {
             return view('dashboard', compact('stations', 'stationDone'));
+        } elseif ($stationDone == 4) {
+            dd($stationDone);
+            return redirect()->route('station.show', ['station' => 5]);
         } else {
-            return view('congrats');
+            return redirect()->route('congrats');
         }
     }
 

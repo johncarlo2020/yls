@@ -4,19 +4,12 @@
         <h1>BORN TO BE ICONIC</h1>
         <div class="content">
             @foreach ($stations as $station)
-            <a
-                class="title-container"
-                href="{{ route('station.show', ['station' => $station->id]) }}"
-            >
+            @if($station->id != 5)
+            <a class="title-container" href="{{ route('station.show', ['station' => $station->id]) }}">
                 <div class="tile {{ $station->id %2 == 0? '':'reverse' }}">
                     <p class="station-number">{{$station->id}}</p>
-                    <div
-                        class="img-container {{$station->status == true ? 'active':''}}"
-                    >
-                        <img
-                            src="{{ asset('images/S' . $station->id . '.jpg') }}"
-                            alt=""
-                        />
+                    <div class="img-container {{$station->status == true ? 'active':''}}">
+                        <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
                         <div class="marker">
                             <p>CHECK-IN SUCCEFUL</p>
                         </div>
@@ -24,6 +17,7 @@
                     <p class="station-name">{{$station->name}}</p>
                 </div>
             </a>
+            @endif
             @endforeach
         </div>
     </div>

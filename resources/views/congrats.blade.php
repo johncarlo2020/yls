@@ -42,22 +42,24 @@
             justify-content: center;
             align-items: center;
         }
+
+        .white {
+            color: white;
+        }
+
         .visit {
             align-self: flex-end;
         }
     </style>
     <div class="congrats">
+        <p>Visit</p>
         <div class="branding">
-            <img class="logo" src="{{ asset('images/logo-large.png') }}" alt="">
+            <img class="logo" src="{{ asset('images/logo.png') }}" alt="">
         </div>
-        <p class="mt-5 tag-line">CONGRATULATIONS <br> YOU HAVE COMPLETED <br> YOUR JOURNEY</p>
-        <div class="visit">
-            <p class="mt-5 mb-4">Visit our official website</p>
-            <div class="mb-3 logo-footer">
-                <img class="main-logo " src="{{ asset('images/logo-large.png') }}" alt="">
-            </div>
-            <a href="https://wardahbeauty.com/">CLick Here for more information</a>
-        </div>
+
+
+        <a class="white" href="https://www.yslbeauty.com.my"> for more information</a>
+
     </div>
 </body>
 

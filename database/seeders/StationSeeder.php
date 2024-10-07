@@ -38,6 +38,10 @@ class StationSeeder extends Seeder
             'description' => 'Strike a pose and be unapologetically yourself.',
         ]);
 
+        Station::create([
+            'name' => 'CONGRATULATIONS!',
+            'description' => "You've completed the 'Born to be Iconic' fragrance experience. Seize your exclusive gift at the gift redemption counter.",
+        ]);
         $role = Role::create(['name' => 'client']);
 
         $role = Role::create(['name' => 'admin']);

@@ -30,7 +30,7 @@ Route::get('/admin/login', function () {
 
 Route::get('/congrats', function () {
     return view('congrats');
-});
+})->name('congrats');
 
 Route::post('/checkExisting', 'App\Http\Controllers\StationController@checkExisting')->name('checkExisting');
 
