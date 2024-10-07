@@ -29,7 +29,8 @@
         </div>
         <div id="mainContent" class="text-center text-content">
             <div class="content">
-                <h1 class="station-number">0{{ $station->id }}</h1>
+                <h1 class="station-born">BORN TO BE ICONIC</h1>
+
                 <h2 class="station-name">{{ $station->name }}</h2>
                 <p class="tag-line">{{ $station->description }}</p>
             </div>

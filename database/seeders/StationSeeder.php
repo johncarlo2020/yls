@@ -24,18 +24,18 @@ class StationSeeder extends Seeder
         ]);
 
         Station::create([
-            'name' => 'BORN TO BE ICONIC',
-            'description' => 'Explore the iconic scents of LIBRE & MYSLF in refill form and indulge in a sensorial journey made to last a lifetime.',
+            'name' => 'ICONS ARE FOREVER',
+            'description' => 'Explore Libre & MYSLF in refill form and indulge in a scent made to last a lifetime.',
         ]);
 
         Station::create([
             'name' => 'MYSLF FRAGRANCE DISCOVERY',
-            'description' => 'Encounter MYSLF Le Parfum, a woody floral statement enhanced by velvety vanilla, for a new sensual ambery trail.',
+            'description' => 'Encounter MYSLF Le Parfum, a new sensual and addictive scent, for a man born unapologetically himself.',
         ]);
 
         Station::create([
             'name' => 'MYSELFIE MANIFESTO',
-            'description' => 'Strike a pose and be unapologetically yourself.',
+            'description' => 'Strike a pose and share your photo on social media using the hashtags: #YSLBeautyMY #YSLFragrance #BorntobeIconic .',
         ]);
 
         Station::create([
