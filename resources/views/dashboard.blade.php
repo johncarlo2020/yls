@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="dashboard main main-bg">
+    <div class="dashboard main main-bg safari-padding">
         <div class="branding-container">@include('components.branding')</div>
         <h1>BORN TO BE ICONIC</h1>
         <div class="content">
