@@ -2,10 +2,13 @@
 @import "variables";
 
         @font-face {
-            font-family: "Singulier";
-            src: url("../fonts/Singulier-Regular.otf") format("opentype");
-            font-weight: 400;
-        }
+    font-family: 'Singulier';
+    src: url('/assets/fonts/Singulier-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Singulier-Regular.woff') format('woff'),
+         url('/assets/fonts/Singulier-Regular.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 
         @font-face {
             font-family: "Singulier-bold";
