@@ -20,7 +20,7 @@ class StationSeeder extends Seeder
     {
         Station::create([
             'name' => 'LIBRE FRAGRANCE & MAKE-UP DISCOVERY',
-            'description' => 'Experience the heat of a flower and the sensuality of a flame in the new Libre Flowers & Flames and discover the world of YSL beauty makeup',
+            'description' => 'Experience the new Libre Flowers & Flames and discover the world of YSL beauty makeup ',
         ]);
 
         Station::create([
