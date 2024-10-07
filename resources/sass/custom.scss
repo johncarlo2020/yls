@@ -706,3 +706,13 @@ a:active {
 }
 
 
+.text-container-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+
+    p {
+        margin: 0 !important;
+    }
+}
