@@ -1,81 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, width=device-width" />
-        <meta name="csrf-token" content="{{ csrf_token() }}" />
-        <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <title>{{ env("APP_NAME") }}</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, width=device-width" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net" />
-        <link
-            href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://unpkg.com/html5-qrcode"
-            type="text/javascript"
-        ></script>
-        <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    </head>
+    <title>{{ env("APP_NAME") }}</title>
 
-    <body>
-        <style>
-            // add custom font from files Singulier-Regular.otf and Singulier-Bold.otf in the fonts folder
-            @font-face {
-                font-family: "Singulier";
-                src: url("../fonts/Singulier-Regular.otf") format("opentype");
-                font-weight: 400;
-            }
+    <!-- Fonts -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+</head>
 
-            @font-face {
-                font-family: "Singulier-bold";
-                src: url("../fonts/Singulier-Bold.otf") format("opentype");
-                font-weight: 600;
-            }
+<body>
+    <main>
+        {{ $slot }}
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
 
-            @font-face {
-                font-family: "Singulier-light";
-                src: url("../fonts/Singulier-Light.otf") format("opentype");
-                font-weight: 300;
-            }
-
-            @font-face {
-                font-family: "Singulier-heavy";
-                src: url("../fonts/Singulier-Heavy.otf") format("opentype");
-                font-weight: 800;
-            }
-
-            @font-face {
-                font-family: "Singulier-demi";
-                src: url("../fonts/Singulier-Demi.otf") format("opentype");
-                font-weight: 500;
-            }
-        </style>
-        <main>
-            {{ $slot }}
-        </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    </body>
 </html>

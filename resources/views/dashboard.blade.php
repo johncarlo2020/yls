@@ -1,7 +1,8 @@
 <x-app-layout>
     <div class="dashboard main main-bg safari-padding">
         <div class="branding-container">@include('components.branding')</div>
-        <h1>BORN TO BE ICONIC</h1>
+        <h1 class="station-born">BORN TO BE ICONIC</h1>
+
         <div class="content">
             @foreach ($stations as $station)
             @if($station->id != 5)
