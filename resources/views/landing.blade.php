@@ -5,7 +5,7 @@
         </div>
         <div id="mainContent" class="text-center text-content">
             <div class="content">
-                <h2 class="station-name">BORN TO BE ICONIC</h2>
+                <h2 class="station-born ">BORN TO BE ICONIC</h2>
                 <p class="tag-line">Start your immersive fragrance experience and discover the iconic scents of Libre
                     Flowers & Flames and MYSLF Le Parfum.</p>
             </div>
