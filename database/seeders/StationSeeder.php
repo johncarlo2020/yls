@@ -20,27 +20,27 @@ class StationSeeder extends Seeder
     {
         Station::create([
             'name' => 'LIBRE FRAGRANCE & MAKE-UP DISCOVERY',
-            'description' => 'Experience the heat of a flower and the sensuality of a flame in the new Libre Flowers & Flames and discover the world of YSL beauty makeup.',
+            'description' => 'Experience the heat of a flower and the sensuality of a flame in the new Libre Flowers & Flames and discover the world of YSL beauty makeup',
         ]);
 
         Station::create([
             'name' => 'ICONS ARE FOREVER',
-            'description' => 'Explore Libre & MYSLF in refill form and indulge in a scent made to last a lifetime.',
+            'description' => 'Explore Libre & MYSLF in refill form and indulge in a scent made to last a lifetime',
         ]);
 
         Station::create([
             'name' => 'MYSLF FRAGRANCE DISCOVERY',
-            'description' => 'Encounter MYSLF Le Parfum, a new sensual and addictive scent, for a man born unapologetically himself.',
+            'description' => 'Encounter MYSLF Le Parfum, a new sensual and addictive scent, for a man born unapologetically himself',
         ]);
 
         Station::create([
             'name' => 'MYSELFIE MANIFESTO',
-            'description' => 'Strike a pose and share your photo on social media using the hashtags: #YSLBeautyMY #YSLFragrance #BorntobeIconic .',
+            'description' => 'Strike a pose and share your photo on social media using the hashtags: #YSLBeautyMY #YSLFragrance #BorntobeIconic.',
         ]);
 
         Station::create([
             'name' => 'CONGRATULATIONS!',
-            'description' => "You've completed the 'Born to be Iconic' fragrance experience. Seize your exclusive gift at the gift redemption counter.",
+            'description' => "You've completed the 'Born to be Iconic' fragrance experience. Seize your exclusive gift at the gift redemption counter",
         ]);
         $role = Role::create(['name' => 'client']);
 

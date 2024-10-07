@@ -35,7 +35,7 @@
                 <p class="tag-line">{{ $station->description }}</p>
             </div>
             <div class="station-img">
-                @if ($station->id == 1)
+                @if ($station->id == 2)
                     <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop alt="" />
                 @else
                     <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
