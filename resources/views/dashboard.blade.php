@@ -14,7 +14,7 @@
                             <p>CHECK-IN SUCCEFUL</p>
                         </div>
                     </div>
-                    <p class="station-name">{{$station->name}}</p>
+                    <p class="station-name-dashboard">{{$station->name}}</p>
                 </div>
             </a>
             @endif

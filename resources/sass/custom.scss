@@ -19,6 +19,12 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
 }
 
+@media screen and (max-width: 767px) {
+    _::-webkit-full-page-media, _:future, :root body {
+        padding-bottom: 65px; //resize
+    }
+}
+
 div {
     box-sizing: border-box !important;
 }
@@ -518,6 +524,11 @@ a:active {
     .accordion-item {
         background-color: transparent;
     }
+}
+.station-name-dashboard{
+    font-size: 12px;
+    align-items: center;
+    text-align: center;
 }
 
 .check-mark {
