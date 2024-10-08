@@ -15,7 +15,7 @@
             </div>
 
             <div class="container w-50 mt-5">
-                <a class="button" href="{{ route('dashboard') }}"> DISCOVER NOW</a>
+                <a class="button-discover" href="{{ route('dashboard') }}"> DISCOVER NOW</a>
             </div>
         </div>
     </div>

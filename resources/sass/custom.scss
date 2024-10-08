@@ -91,6 +91,21 @@ div {
     width: 12vh;
 }
 
+.button-discover {
+    background-color: $white !important;
+    color: #303030 !important;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: block;
+}
+
 .button {
     background-color: $white !important;
     color: #303030 !important;

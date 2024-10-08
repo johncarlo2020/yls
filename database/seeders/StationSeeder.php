@@ -35,7 +35,7 @@ class StationSeeder extends Seeder
 
         Station::create([
             'name' => 'MYSLFIE MANIFESTO',
-            'description' => 'Strike a pose and share your photo on social media using the hashtags: #YSLBeautyMY #YSLFragrance #BorntobeIconic.',
+            'description' => 'Strike a pose and share your photo on social media using the hashtags: #YSLBeautyMY #YSLFragrance #BorntobeIconic',
         ]);
 
         Station::create([
