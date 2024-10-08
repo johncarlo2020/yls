@@ -42,7 +42,7 @@
             </div>
             <div class="station-img">
                 @if ($station->id == 2)
-                <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop alt="" />
+                <video src="{{ asset('images/vid.mp4') }}" autoplay muted loop playsinline alt="" />
                 @else
                 <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
                 @endif
