@@ -20,12 +20,12 @@ class StationSeeder extends Seeder
     {
         Station::create([
             'name' => 'LIBRE FRAGRANCE & MAKE-UP DISCOVERY',
-            'description' => 'Experience the new Libre Flowers & Flames and discover the world of YSL beauty makeup ',
+            'description' => 'Experience the new LIBRE Flowers & Flames and discover the world of YSL beauty makeup ',
         ]);
 
         Station::create([
             'name' => 'ICONS ARE FOREVER',
-            'description' => 'Explore Libre & MYSLF in refill form and indulge in a scent made to last a lifetime',
+            'description' => 'Explore LIBRE & MYSLF in refill form and indulge in a scent made to last a lifetime',
         ]);
 
         Station::create([
