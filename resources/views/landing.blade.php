@@ -7,7 +7,7 @@
             <div class="content">
                 <h2 class="station-born ">BORN TO BE ICONIC</h2>
                 <p class="landing-tagline">Start your immersive fragrance experience and discover the iconic scents of
-                    Libre
+                    LIBRE
                     Flowers & Flames and MYSLF Le Parfum.</p>
             </div>
             <div class="station-img">

@@ -5,17 +5,18 @@
                 <div class="modal-body">
                     <div class="text-center content">
                         <div class="image-check">
-                            <i class="fa-regular check"></i>
+                            <i class="fa-regular check" style="font-size: 25px;
+    margin-bottom: 25px;"></i>
                         </div>
                         <div class="text-content">
-                            <p class="station-text">
-                                Station <span class="station_id"></span>
+                            <p class="station-name-modal">
+
                             </p>
                             <p class="message">Check-in Successful</p>
                         </div>
                         <div class="">
                             <a href="{{ route('dashboard') }}" class="button">
-                                Close
+                                Next
                             </a>
                         </div>
                     </div>
@@ -30,8 +31,13 @@
         <div id="mainContent" class="text-center text-content">
             <div class="content">
                 <h1 class="station-born">BORN TO BE ICONIC</h1>
+                @if($station->id == 1)
+                <h2 class="station-name">LIBRE FRAGRANCE <br>& MAKE-UP DISCOVERY</h2>
 
+                @else
                 <h2 class="station-name">{{ $station->name }}</h2>
+
+                @endif
                 <p class="tag-line">{{ $station->description }}</p>
             </div>
             <div class="station-img">
@@ -52,8 +58,6 @@
             <div class="scanner-button">
                 <p class="mb-2">Checked In</p>
                 <a class="button" href="{{ route('dashboard') }}"> Back</a>
-
-
             </div>
             @endif
         </div>
@@ -138,10 +142,19 @@
             const trimmedMessage = message.trim();
             // Get the last character of the QR code message
             const lastCharacter = trimmedMessage.charAt(trimmedMessage.length - 1);
-            $('.station_id').html(lastCharacter);
-
-
             $('.check').addClass('fa-circle-check text-success');
+            if (lastCharacter == 5) {
+                var name = 'GIFT HAS BEEN SUCCESSFULLY REDEEMED';
+                $('.station-name-modal').html(name);
+                $('.message').addClass('d-none');
+            } else {
+                var name = $('.station-name').html();
+                $('.station-name-modal').html(name);
+            }
+
+
+            mainContent.classList.remove('d-none');
+            scannerContainer.classList.add('d-none');
 
             $('#scanCompleteModal').modal('show');
         },
@@ -151,6 +164,8 @@
             $('.message').html('Invalid QR code. Please try again.');
             $('.check').addClass('fa-circle-xmark text-danger');
 
+            mainContent.classList.remove('d-none');
+            scannerContainer.classList.add('d-none');
             $('#scanCompleteModal').modal('show');
 
 

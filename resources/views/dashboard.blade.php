@@ -12,7 +12,7 @@
                     <div class="img-container {{$station->status == true ? 'active':''}}">
                         <img src="{{ asset('images/S' . $station->id . '.jpg') }}" alt="" />
                         <div class="marker">
-                            <p>CHECK-IN SUCCEFUL</p>
+                            <p>CHECK-IN SUCCESFUL</p>
                         </div>
                     </div>
                     <div class="text-container-dashboard">
