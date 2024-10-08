@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="modal fade safari-padding" id="scanCompleteModal" tabindex="-1">
+    <div class="modal fade " id="scanCompleteModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -61,7 +61,7 @@
         </div>
         <div id="scannerContainer" class="scanner-container d-none">
             <!-- <button id="close" class="mx-auto mt-4 camera-btn">x</button> -->
-            <div id="reader"></div>
+            <div style="width: 300px" id="reader"></div>
             <div class="p-3 mt-3">
                 <p class="px-4 text-center bottom-text">
                     Find the QR code & Scan to check in the station
@@ -88,7 +88,6 @@
             mainContent.classList.add('d-none');
             scannerContainer.classList.remove('d-none');
             const isLandscape = window.innerWidth > window.innerHeight;
-            console.log(isLandscape);
             //get permission to use camera dont start qr scanner until permission is granted
 
             const html5QrCode = new Html5Qrcode("reader");
@@ -99,9 +98,9 @@
                         fps: 10,
                         qrbox: {
                             width: 200,
-                            height: 150
+                            height: 250
                         },
-                        aspectRatio: isLandscape ? 9 / 16 : 16 / 9
+                        aspectRatio: isLandscape ? 3 / 4 : 4 / 3
 
                     },
                     qrCodeMessage => {
