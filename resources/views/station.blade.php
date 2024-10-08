@@ -1,17 +1,14 @@
 <x-app-layout>
     <div class="modal fade safari-padding" id="scanCompleteModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered d-flex align-items-center justify-content-center">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="text-center content">
                         <div class="image-check">
-                            <i class="fa-regular check" style="font-size: 25px;
-    margin-bottom: 25px;"></i>
+                            <i class="fa-regular check" style="font-size: 25px; margin-bottom: 25px;"></i>
                         </div>
                         <div class="text-content">
-                            <p class="station-name-modal">
-
-                            </p>
+                            <p class="station-name-modal"></p>
                             <p class="message">Check-in Successful</p>
                         </div>
                         <div class="">
@@ -24,6 +21,8 @@
             </div>
         </div>
     </div>
+
+
     <div id="stationPage" class="station-page main main-bg">
         <div class="mb-3 branding-container">
             @include('components.branding')
@@ -102,7 +101,7 @@
                     width: 200,
                     height: 150
                 },
-                aspectRatio: isLandscape ? 3 / 4 : 4 / 3
+                aspectRatio: 16 / 9
 
             },
                 qrCodeMessage => {
