@@ -90,6 +90,7 @@
             scannerContainer.classList.remove('d-none');
             const isLandscape = window.innerWidth > window.innerHeight;
             //get permission to use camera dont start qr scanner until permission is granted
+            const qrboxSize = isLandscape ? { width: 300, height: 200 } : { width: 200, height: 150 };
 
             const html5QrCode = new Html5Qrcode("reader");
 
@@ -97,10 +98,7 @@
                 facingMode: "environment",
             }, {
                 fps: 10,
-                qrbox: {
-                    width: 200,
-                    height: 150
-                },
+                qrbox: qrboxSize,
                 aspectRatio: 16 / 9
 
             },
