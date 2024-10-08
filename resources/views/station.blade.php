@@ -100,7 +100,7 @@
                 fps: 10,
                 qrbox: {
                     width: 200,
-                    height: 250
+                    height: 150
                 },
                 aspectRatio: isLandscape ? 3 / 4 : 4 / 3
 
