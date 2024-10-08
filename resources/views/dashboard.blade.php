@@ -16,7 +16,15 @@
                         </div>
                     </div>
                     <div class="text-container-dashboard">
-                        <p class="station-name-dashboard">{{$station->name}}</p>
+                        <p class="station-name-dashboard">
+                            @if($station->id == 1)
+                            LIBRE FRAGRANCE <br>& MAKE-UP DISCOVERY
+
+                            @else
+                            {{ $station->name }}
+
+                            @endif
+                        </p>
                     </div>
                 </div>
             </a>
