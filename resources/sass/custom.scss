@@ -24,6 +24,7 @@
             src: url("../fonts/Singulier-Heavy.otf") format("opentype");
         }
 
+
         @font-face {
             font-family: "Singulier-demi";
             src: url("../fonts/Singulier-Demi.otf") format("opentype");
@@ -97,7 +98,7 @@ div {
     background-color: $white !important;
     color: #303030 !important;
     border: none;
-    padding: 10px 20px;
+        padding: 10px 5px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
@@ -516,6 +517,18 @@ a:active {
         }
     }
 }
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+}
+
+
+
 
 .register-page {
     overflow-y: auto;

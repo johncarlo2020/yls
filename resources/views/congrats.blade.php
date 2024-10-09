@@ -11,8 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -20,6 +19,24 @@
 
 <body class="welcome main main-bg">
     <style>
+        @font-face {
+            font-family: 'Singulier';
+            src: url('../fonts/Singulier-Regular.woff2') format('woff2'),
+                url('../fonts/Singulier-Regular.woff') format('woff'),
+                url('../fonts/Singulier-Regular.otf') format('opentype');
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Singulier", sans-serif;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+        }
+
         .main-logo {
             width: 34%;
             height: auto;
