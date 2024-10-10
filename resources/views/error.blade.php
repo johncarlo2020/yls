@@ -39,7 +39,7 @@
             </p>
         </div>
         <div class="container">
-            <a class="button-error" href="https://event-my-ysl-dpcis.cprv.review/?redirect_url=&trans_source=ZZ0"> Join
+            <a class="button-error" href="https://event-my-ysl-dpcis.cprv.io/?redirect_url=&trans_source=ZZ0"> Join
                 Now</a>
         </div>
     </div>
