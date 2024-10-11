@@ -35,12 +35,12 @@
         </div>
         <div class="container mb-5">
             <p>
-                Please rescan and access the QR from the digital journey. To
-                start the journey
+                Please click the button below to join the journey
             </p>
         </div>
         <div class="container">
-            <a class="button-error" href="{{ route('welcome') }}"> Click here</a>
+            <a class="button-error" href="https://event-my-ysl-dpcis.cprv.io/?redirect_url=&trans_source=ZZ0"> Join
+                Now</a>
         </div>
     </div>
     </div>
