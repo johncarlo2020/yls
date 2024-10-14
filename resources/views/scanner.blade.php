@@ -116,6 +116,15 @@
         });
     });
 
+    $('#add-code').click(function () {
+        console.log($('#manual-code').val());
+
+        generateQRCode('borntobeiconic.com/register?id=' + $('#manual-code').val());
+
+        // Show the modal
+        $("#qrModal").modal("show");
+    });
+
     function generateQRCode(url) {
         var qrCodeContainer = document.getElementById("qr-code");
         qrCodeContainer.innerHTML = ""; // Clear previous QR code
