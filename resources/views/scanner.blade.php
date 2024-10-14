@@ -5,26 +5,20 @@
             <div class="p-3 pb-0 card-header">
                 <h6 class="mb-2">Barcode Scanner</h6>
             </div>
-            <div
-                id="scanner"
-                style="
+            <div id="scanner" style="
                     width: 100%;
                     height: 300px;
                     border: 2px dashed #007bff;
                     position: relative;
                     overflow: hidden;
-                "
-            >
-                <video
-                    id="video"
-                    style="
+                ">
+                <video id="video" style="
                         width: 100%;
                         height: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;
-                    "
-                ></video>
+                    "></video>
             </div>
             <div class="mt-3">
                 <h4>Scanned Code:</h4>
@@ -32,21 +26,10 @@
             </div>
 
             <div class="mt-3">
-                <label for="manual-code" class="form-label"
-                    >Manual Code Entry:</label
-                >
-                <input
-                    type="text"
-                    id="manual-code"
-                    class="form-control"
-                    placeholder="Enter code here"
-                    style="max-width: 300px; margin: 0 auto"
-                />
-                <button
-                    id="add-code"
-                    class="btn btn-primary mt-2"
-                    style="max-width: 150px"
-                >
+                <label for="manual-code" class="form-label">Manual Code Entry:</label>
+                <input type="text" id="manual-code" class="form-control" placeholder="Enter code here"
+                    style="max-width: 300px; margin: 0 auto" />
+                <button id="add-code" class="btn btn-primary mt-2" style="max-width: 150px">
                     Add Code
                 </button>
             </div>
@@ -55,36 +38,18 @@
 </div>
 
 <!-- QR Code Modal -->
-<div
-    class="modal fade"
-    id="qrModal"
-    tabindex="-1"
-    aria-labelledby="qrModalLabel"
-    aria-hidden="true"
->
+<div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="qrModalLabel">QR Code</h5>
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                ></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div
-                class="modal-body d-flex justify-content-center align-items-center"
-            >
+            <div class="modal-body d-flex justify-content-center align-items-center">
                 <div id="qr-code" style="width: 256px; height: 256px"></div>
             </div>
             <div class="modal-footer">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                    id="closeModal"
-                >
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModal">
                     Close
                 </button>
             </div>
@@ -134,11 +99,12 @@
         // Capture and display the barcode result
         Quagga.onDetected(function (result) {
             var code = result.codeResult.code;
+
             document.getElementById("scanned-result").innerText = code;
 
             console.log("Scanned code: " + code);
             // Generate QR code for the dashboard link
-            generateQRCode(code);
+            generateQRCode('borntobeiconic.com/register?id='.code);
 
             // Show the modal
             $("#qrModal").modal("show");
