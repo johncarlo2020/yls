@@ -107,7 +107,7 @@
 
             console.log("Scanned code: " + code);
             // Generate QR code for the dashboard link
-            generateQRCode('borntobeiconic.com/register?id='.code);
+            generateQRCode('borntobeiconic.com/register?id=' + code);
 
             // Show the modal
             $("#qrModal").modal("show");
